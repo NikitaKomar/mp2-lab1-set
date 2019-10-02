@@ -26,3 +26,4 @@
 *.exe
 *.out
 *.app
+/sln/vc17/.vs/set/v15
