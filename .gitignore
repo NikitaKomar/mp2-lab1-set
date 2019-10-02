@@ -26,3 +26,5 @@
 *.exe
 *.out
 *.app
+/sln/vc17/.vs/set/v15/ipch/AutoPCH/e432f72db120fef1
+/sln/vc17/.vs/set/v15
