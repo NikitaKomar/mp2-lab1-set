@@ -1,5 +1,3 @@
-﻿  Building Custom Rule C:/Users/Komars/source/repos/mp2-lab1-set/src/CMakeLists.txt
-  tbitfield.cpp
-  tset.cpp
-  Создание кода...
+﻿  tbitfield.cpp
+C:\Users\Komars\source\repos\mp2-lab1-set\src\tbitfield.cpp(170): warning C4018: >: несоответствие типов со знаком и без знака
   set.vcxproj -> C:\Users\Komars\source\repos\mp2-lab1-set\sln\vc17\lib\Debug\set.lib
