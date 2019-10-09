@@ -16,6 +16,8 @@ TBitField::TBitField(int len)
 
 TBitField::TBitField(const TBitField &bf) // конструктор копирования
 {
+
+
 }
 
 TBitField::~TBitField()
@@ -67,17 +69,35 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 {
-  return *this;
+	if (this == &bf)
+		return *this;
+	BitLen = bf.BitLen;
+	MemLen = bf.MemLen;
+	pMem = new TELEM[MemLen];
+	for (int i = 0; i < MemLen; i++)
+		pMem[i] = bf.pMem[i];
+	return *this;
 }
 
 int TBitField::operator==(const TBitField &bf) const // сравнение
 {
-  return 0;
+	if (BitLen != bf.BitLen)
+		return 0;
+	for (int i = 0; i < MemLen; i++)
+		if (*(pMem+i) != *(bf.pMem+i))
+			return 0;
+	return 1;
 }
 
 int TBitField::operator!=(const TBitField &bf) const // сравнение
 {
-  return 0;
+	if (BitLen == bf.BitLen)
+		return 0;
+	for (int i = 0; i < MemLen; i++)
+		if (pMem[i] == bf.pMem[i])
+			return 0;
+	return 1;
+
 }
 
 TBitField TBitField::operator|(const TBitField &bf) // операция "или"
